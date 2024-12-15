@@ -1,0 +1,149 @@
+.App {
+  height: 100vh;
+  display: flex;
+  background: linear-gradient(rgb(8, 60, 92),rgb(118, 8, 158));
+  color: white;
+}
+.main{
+  width: 80%;
+  background-image: url("./assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+.top{
+  height: 50%;
+  position: relative;
+}
+.bottom{
+  height: 50%;
+}
+.timer
+{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border: 5px solid rgb(32, 1, 69);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  background: linear-gradient(rgb(78, 11, 137),rgb(11, 35, 108));
+  margin: 20px;
+  position: absolute;
+}
+.pyramid{
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.moneylist{
+  list-style: none;
+  width: 100%;
+  padding: 20px;
+}
+.moneylistnumber{
+  font-size: 18px;
+  width: 30%;
+}
+.moneylistamount{
+  font-size: 20px;
+}
+.moneylistitem.active{
+  background: linear-gradient(rgb(11, 145, 157),rgb(0, 38, 153));
+
+}
+.moneylistitem{
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  border-radius: 10px;
+}
+.kbc{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.question{
+  margin-top: 30px;
+  width: 80%;
+  border: 3px solid white;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 20px;
+  background: linear-gradient(rgb(127, 69, 227),rgb(47, 47, 189),rgb(11, 7, 81));
+  justify-content: center;
+}
+.answer{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.answers{
+  width: 40%;
+  padding: 15px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: linear-gradient(rgb(127, 69, 227),rgb(47, 47, 189),rgb(11, 7, 81));
+  font-size: 20px;
+  margin: 10px 35px;
+  cursor: pointer;
+}
+.answers:hover{
+  background: linear-gradient(rgb(82, 163, 240),rgb(73, 86, 207));
+}
+.answers.act{
+  background: orange;
+}
+.answers.correct{
+  animation: correct 3s ease forwards;
+}
+@keyframes correct{
+  0%,
+  22%,
+  42%{
+    background: blueviolet;
+  }
+  20%,
+  40%,
+  60%{
+    background: blue;
+  }
+  62%,100%{
+    background: green;
+  }
+}
+.answers.wrong{
+  animation: wrong 3s ease forwards;
+}
+@keyframes wrong{
+  0%,
+  22%,
+  42%{
+    background: blueviolet;
+  }
+  20%,
+  40%,
+  60%{
+    background: blue;
+  }
+  62%,100%{
+    background: red;
+  }
+}
+.end{
+  margin: auto;
+  background: linear-gradient(rgb(125, 21, 200),rgb(1, 46, 170));
+  color: rgb(57, 155, 201);
+  border: 5px solid blueviolet;
+  border-radius: 20px;
+  padding: 30px;
+}
